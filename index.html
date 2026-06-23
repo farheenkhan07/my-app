@@ -7,14 +7,46 @@
 </head>
 <style>
     body {
-        background-color: #e33a4b;
-        
+        background-color: hsla(352, 100%, 3%, 0.095);
     }
+    #container {
+        font-size: 120px;
+        font-weight: bold;
+        color: rgb(201, 53, 53);
+        text-align: center;
+        margin-top: 40px;
+    }
+    button {
+        display: block;
+        margin: 20px auto;
+        font-size: 48px;
+        padding: 20px 60px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        background-color: white;
+        color: #e33a4b;
+        font-weight: bold;
+    }
+   
+  
 </style>
 <body>
 
-
-    <h1>Farheen Khan</h1>
+    <div id ="container"></div>
+    <button onclick="increment()"> + </button>
 
 </body>
+
+<script>
+  let count = 0;
+  document.getElementById("container").innerHTML = count;
+  function increment(){
+    count++;
+    document.getElementById("container").innerHTML = count;
+    console.log("count", count);
+  }
+
+
+</script>
 </html>
